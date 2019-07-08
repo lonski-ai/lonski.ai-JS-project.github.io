@@ -1,15 +1,14 @@
 html {
     box-sizing: border-box;
     min-height: 100vh;
-    font-size: 10px;
+    font-size: 1em;
     background: linear-gradient(to bottom, #fdfcfb, #f5f0eb);
 }
-
 
 body {
     padding: 0;
     margin: 0;
-    font-family: 'Amatic SC', cursive;
+    font-family: 'Ubuntu', cursive;
     text-align: center;
 }
 
@@ -24,9 +23,9 @@ button:focus {
     outline: none;
 }
 
-h1 {
+h1, h2 {
     text-align: center;
-    font-size: 10rem;
+    font-family:'Amatic SC';
     line-height: 1;
     margin-bottom: 0;
 }
@@ -39,6 +38,7 @@ h1 {
 }
 
 .game {
+
     width: 1200px;
     height:800px;
     display: flex;
@@ -46,6 +46,7 @@ h1 {
     margin:0 auto;
     background: url("img/background.png");
     background-size: cover;
+    cursor: none;
 }
 
 .hole {
@@ -72,11 +73,49 @@ h1 {
     position: absolute;
     bottom: -30%;
     width: 100%;
-
     transition: all 0.5s;
+}
 
+.mole img {
+    width: 110px;
 }
 
 .mole.up{
     bottom: 0;
+}
+
+.molotdown {
+    transform: rotate(-100deg);
+    transition: all ease-out 0.1s;
+}
+
+.molotup {
+    transform: rotate(0deg);
+    animation-delay: 0.5s;
+    transition: all ease-out 0.1s;
+
+}
+
+.game {
+    position: relative;
+}
+
+#thing {
+    position: absolute;
+}
+
+.block {
+    /*cursor: none;*/
+    position: relative;
+    margin: auto;
+    height: 1500px;
+    width:1000px;
+    border: 2px solid red;
+}
+.molot {
+    z-index: 1;
+}
+
+.gameRules {
+    display: none;
 }
