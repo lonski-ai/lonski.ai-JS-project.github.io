@@ -10,12 +10,12 @@ const gameResultsList = document.getElementById("gameResultsList");
 const gameDiv = document.getElementById("gameDiv");
 const gameRules = document.getElementById("gameRules");
 const gameResults = document.getElementById("gameResults");
-const gameTime = 5000;
+const gameTime = 60000;
 let lastHole;
 let timeUp = false;
 let score = 0;
 let intervalID;
-const stringName = 'qwertyui';
+const stringName = 'Lonski_projectJs';
 let UpdatePassword;
 const MyStorage = new TAJAXStorage();
 
@@ -102,7 +102,7 @@ function randomMole(moles) {
  */
 
 function peep() {
-  const time = randomTime(2000, 2000);
+  const time = randomTime(500, 2000);
   const mole = randomMole(moles);
   mole.classList.add("up");
   setTimeout(function () {
@@ -220,7 +220,7 @@ switchToStateFromURLHash();
 
 function TAJAXStorage() {
   const self = this;
-  let myHash = [];
+  self.myHash = [];
   $.ajax("https://fe.it-academy.by/AjaxStringStorage2.php",
       {type: "POST", dataType: "json", data: {f: "READ", n: stringName}, success: ajaxDBStartReady, error: errorHandler}
   );
