@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Whack A Mole!</title>
+  <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="jquery/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<audio>
+  <source src="1.mp3"></source>
+  <source src="1.mp3"></source>
+</audio>
+<nav>
+  <ul>
+    <li id="gameList">Игра</li>
+    <li id="gameRulesList">Правила</li>
+    <li id="gameResultsList">Результаты</li>
+  </ul>
+</nav>
+<div id="gameDiv">
+  <span>Время до конца игры: <span class="endGame">60</span></span>
+  <button id="button" onClick="startGame()">Начать игру</button>
+  <span>Поймано кротов: <span class="score">0</span></span>
+  <div id="game" class="game">
+    <img class="molot molotup" id="thing" src="img/molot.png">
+    <div class="hole">
+      <div class="mole">
+        <img src="./img/mole.svg">
+      </div>
+    </div>
+    <div class="hole">
+      <div class="mole">
+        <img src="./img/mole.svg"></div>
+    </div>
+    <div class="hole">
+      <div class="mole">
+        <img src="./img/mole.svg"></div>
+    </div>
+    <div class="hole">
+      <div class="mole">
+        <img src="./img/mole.svg"></div>
+    </div>
+    <div class="hole">
+      <div class="mole">
+        <img src="./img/mole.svg"></div>
+    </div>
+    <div class="hole">
+      <div class="mole">
+        <img src="./img/mole.svg">
+      </div>
+    </div>
+  </div>
+</div>
+<div id="gameRules" class="gameRules">
+  <h1>Правила игры</h1>
+  <div>
+    <p>Кроты вылазят из нор в случайном порядке, на случайное количество времени.</p>
+    <p>Вам нужно ударять по выглядывающим кротам. За каждое попадание игрок получает +1 очко.</p>
+    <p>Игра длиться 60 секунд.</p>
+  </div>
+</div>
+<div id="gameResults"></div>
+<script src="js/script.js"></script>
+
+</body>
+</html>

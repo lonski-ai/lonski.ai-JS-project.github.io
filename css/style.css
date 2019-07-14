@@ -1,0 +1,156 @@
+html {
+    box-sizing: border-box;
+    min-height: 100vh;
+    font-size: 1em;
+    background: linear-gradient(to bottom, #fdfcfb, #f5f0eb);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Ubuntu', cursive;
+    text-align: center;
+}
+
+button {
+    padding: 10px 40px;
+    margin: 20px;
+    background-color: inherit;
+    font-size: 1.2em;
+    font-family: 'Ubuntu', cursive;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid black;
+    background: lightgray;
+}
+
+button:hover {
+    background: white;
+}
+
+button:focus {
+    outline: none;
+}
+
+h1, h2 {
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 0;
+}
+
+.score, .endGame {
+    background: rgba(255, 255, 255, 0.3);
+    margin: 0 1rem;
+    line-height: 1;
+    border-radius: 1rem;
+}
+
+.game {
+    width: 1200px;
+    height: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    background: url("../img/background.png");
+    background-size: cover;
+    cursor: none;
+}
+
+.hole {
+    flex: 1 0 33.33%;
+    overflow: hidden;
+    position: relative;
+    background: url(../img/shape3401.svg) bottom center no-repeat;
+    background-size: 50%;
+}
+
+.hole:after {
+    display: block;
+    background: url(../img/shape3411.svg) bottom center no-repeat;
+    background-size: 50%;
+    content: '';
+    width: 100%;
+    height: 105px;
+    position: absolute;
+    bottom: -45px;
+}
+
+.mole {
+    position: absolute;
+    bottom: -40%;
+    left: 25%;
+    width: 50%;
+    transition: all 0.5s;
+}
+
+.mole img {
+    width: 100%;
+}
+
+.mole.up {
+    bottom: 0;
+}
+
+.molotdown {
+    transform: rotate(-100deg);
+    transition: all ease-out 0.1s;
+}
+
+.molotup {
+    transform: rotate(0deg);
+    animation-delay: 0.5s;
+    transition: all ease-out 0.1s;
+}
+
+.game {
+    position: relative;
+}
+
+#thing {
+    position: absolute;
+}
+
+.molot {
+    display: none;
+    width: 100px;
+    z-index: 1;
+}
+
+.game:hover .molot {
+    display: block;
+}
+
+.gameRules {
+    display: none;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    justify-content: space-around;
+    margin: auto;
+    list-style: none;
+}
+
+li {
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+span {
+    font-size: 1.5em;
+}
+
+table {
+    margin: 30px auto;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 5px;
+}
+
+@media only screen and (max-width: 767px ) {
+    body {display: none;}
+}
